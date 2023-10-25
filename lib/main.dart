@@ -126,7 +126,7 @@ class Body extends StatelessWidget {
         ListTile(
           onTap: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const LagPage()));
+                MaterialPageRoute(builder: (context) => const FifthRoute()));
           },
           title: const Text('Natação'),
           subtitle: const Text('Aeróbico e anaeróbico'),
@@ -145,7 +145,10 @@ class SecondRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Treino A', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 26),),
+        title: const Text(
+          'Treino A',
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 26),
+        ),
       ),
       body: Card(
         // mainAxisAlignment: MainAxisAlignment.start,
@@ -159,10 +162,9 @@ class SecondRoute extends StatelessWidget {
               trailing: const Icon(Icons.link),
               onTap: () {
                 Navigator.push(
-                  context, 
-                  MaterialPageRoute(
-                    builder: (context) => 
-                     const GifToLegPress()));
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const GifToLegPress()));
               },
             ),
             ListTile(
@@ -171,10 +173,9 @@ class SecondRoute extends StatelessWidget {
               trailing: const Icon(Icons.link),
               onTap: () {
                 Navigator.push(
-                  context, 
-                  MaterialPageRoute(
-                    builder: (context) => 
-                     const GifToSquat()));
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const GifToSquat()));
               },
             ),
             ListTile(
@@ -183,10 +184,9 @@ class SecondRoute extends StatelessWidget {
               trailing: const Icon(Icons.link),
               onTap: () {
                 Navigator.push(
-                  context, 
-                  MaterialPageRoute(
-                    builder: (context) => 
-                     const GifToFlexor()));
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const GifToFlexor()));
               },
             ),
             ListTile(
@@ -195,10 +195,9 @@ class SecondRoute extends StatelessWidget {
               trailing: const Icon(Icons.link),
               onTap: () {
                 Navigator.push(
-                  context, 
-                  MaterialPageRoute(
-                    builder: (context) => 
-                     const GifToExtender()));
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const GifToExtender()));
               },
             ),
             ListTile(
@@ -206,11 +205,8 @@ class SecondRoute extends StatelessWidget {
               subtitle: const Text("3 x 12 + 12 + 12 - repetições"),
               trailing: const Icon(Icons.link),
               onTap: () {
-                Navigator.push(
-                  context, 
-                  MaterialPageRoute(
-                    builder: (context) => 
-                     const GifToCalf()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const GifToCalf()));
               },
             ),
             ElevatedButton(
@@ -232,65 +228,66 @@ class GifToLegPress extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Exemplo LagPress 45º'),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [Image.network('https://media.tenor.com/e0qeS17dv7QAAAAC/legpress45-leg-press.gif'),]
-      )
-    );
+        appBar: AppBar(
+          title: const Text('Exemplo LagPress 45º'),
+        ),
+        body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Image.network(
+              'https://media.tenor.com/e0qeS17dv7QAAAAC/legpress45-leg-press.gif'),
+        ]));
   }
 }
+
 class GifToSquat extends StatelessWidget {
   const GifToSquat({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Exemplo Squat e Hack'),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.network('https://www.mundoboaforma.com.br/wp-content/uploads/2020/11/avanco-com-halteras.gif'),
-          Image.network('https://www.mundoboaforma.com.br/wp-content/uploads/2020/11/agachamento-no-rack.gif'),  
-        ],
-      )
-    );
+        appBar: AppBar(
+          title: const Text('Exemplo Squat e Hack'),
+        ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.network(
+                'https://www.mundoboaforma.com.br/wp-content/uploads/2020/11/avanco-com-halteras.gif'),
+            Image.network(
+                'https://www.mundoboaforma.com.br/wp-content/uploads/2020/11/agachamento-no-rack.gif'),
+          ],
+        ));
   }
 }
+
 class GifToFlexor extends StatelessWidget {
   const GifToFlexor({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Exemplo Flexora'),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [Image.network('https://www.mundoboaforma.com.br/wp-content/uploads/2021/04/pernas-flexao-de-pernas-na-maquina.gif'),]
-      )
-    );
+        appBar: AppBar(
+          title: const Text('Exemplo Flexora'),
+        ),
+        body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Image.network(
+              'https://www.mundoboaforma.com.br/wp-content/uploads/2021/04/pernas-flexao-de-pernas-na-maquina.gif'),
+        ]));
   }
 }
+
 class GifToExtender extends StatelessWidget {
   const GifToExtender({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Exemplo Extensora'),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [Image.network('https://media.tenor.com/fNeMiJuGmEcAAAAC/cadeira-extensora-extensora.gif'),]
-      )
-    );
+        appBar: AppBar(
+          title: const Text('Exemplo Extensora'),
+        ),
+        body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Image.network(
+              'https://media.tenor.com/fNeMiJuGmEcAAAAC/cadeira-extensora-extensora.gif'),
+        ]));
   }
 }
 
@@ -305,7 +302,10 @@ class GifToCalf extends StatelessWidget {
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [Image.network("https://i.pinimg.com/originals/19/54/4f/19544f4e21322137847a25acd501a18a.gif")],
+        children: [
+          Image.network(
+              "https://i.pinimg.com/originals/19/54/4f/19544f4e21322137847a25acd501a18a.gif")
+        ],
       ),
     );
   }
@@ -362,43 +362,19 @@ class FifthRoute extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Natação'),
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: const Text('Go back!'),
+      body: Card(
+        child: Column(
+          children: [
+            Image.network("https://www.amaralnatacao.com.br/wp-content/uploads/piscina_shutterstock_112363484-712x475.jpg",),
+
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text('Go back!'),
+            ),
+          ],
         ),
-      ),
-    );
-  }
-}
-
-class LagPage extends StatelessWidget {
-  const LagPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Imagem"),
-      ),
-      body: Column(
-        children: [
-          Image.asset(
-            'lib/assets/lag.jpg',
-          ),
-          const Text(
-            "Image 2",
-            style: TextStyle(fontSize: 32),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: const Text('Voltar!'),
-          ),
-        ],
       ),
     );
   }
